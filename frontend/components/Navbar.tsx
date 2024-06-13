@@ -38,7 +38,7 @@ import {
 export default function Navbar() {
   return (
     <div className="flex sticky top-0 flex-col">
-      <header className="bg-red-900  flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+      <header className="bg-[#0E1217]  flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
         <Sheet>
           <SheetTrigger asChild>
             <Button
