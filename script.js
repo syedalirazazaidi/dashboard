@@ -82,12 +82,20 @@ console.log("hi developer");
 // raza-->zara
 function anagram(str1, str2) {
   var maphash = {};
+  //   for (const value of str1) {
+  //     maphash[value] = (maphash[value] ?? 0) + 1;
+  //   }
+  //   return maphash
   for (const value of str1) {
-    maphash[value] = (maphash[value] || 0) + 1;
+    if (maphash[value]) {
+      maphash[value] = maphash[value] + 1;
+    } else {
+      maphash[value] = 1;
+    }
   }
   return maphash
 }
 var object = anagram("alii", "ila");
 for (const property in object) {
-    console.log(`${property}: ${object[property]}`);
-  }
+  console.log(`${property}: ${object[property]}`);
+}
