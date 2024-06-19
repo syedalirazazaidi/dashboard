@@ -48,18 +48,18 @@ console.log("hi developer");
 // console.log(plus);
 
 // sum of pair whose sum is zero
-function sumaaryy() {
-  var arr = [-5, -4, -3, -2, 0, 2, 4, 6, 8];
-  for (let index = 0; index < arr.length; index++) {
-    for (let j = 0; j < arr.length; j++) {
-        var sum = arr[index]+arr[j]
-        if(sum===0){
-    //   return{ value:[arr[left], arr[right]],index:[left,right]}
-return [index,j]
-        }
-    }
-    
-  }
+// function sumaaryy() {
+//   var arr = [-5, -4, -3, -2, 0, 2, 4, 6, 8];
+//   for (let index = 0; index < arr.length; index++) {
+//     for (let j = 0; j < arr.length; j++) {
+//         var sum = arr[index]+arr[j]
+//         if(sum===0){
+//     //   return{ value:[arr[left], arr[right]],index:[left,right]}
+// return [index,j]
+//         }
+//     }
+
+//   }
 //   var left = 0;
 //   var right = arr.length - 1;
 //   while (left < right) {
@@ -70,7 +70,24 @@ return [index,j]
 //     left++;
 //     right--;
 //   }
-}
+// }
 
-var newarray=sumaaryy()
-console.log(newarray);
+// var newarray=sumaaryy()
+// console.log(newarray);
+
+//check anagram // sort an array and count alphabet
+
+// string anagram
+// hello --> olleo
+// raza-->zara
+function anagram(str1, str2) {
+  var maphash = {};
+  for (const value of str1) {
+    maphash[value] = (maphash[value] || 0) + 1;
+  }
+  return maphash
+}
+var object = anagram("alii", "ila");
+for (const property in object) {
+    console.log(`${property}: ${object[property]}`);
+  }
