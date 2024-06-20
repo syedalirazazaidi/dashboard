@@ -102,19 +102,33 @@
 
 // sort an array
 
-var sortarar = [4, 9, 1, 10, 11, 0, 10];
+// var sortarar = [4, 9, 1, 10, 11, 0, 10];
 
-function SortArray(params) {
-  for (let value of params) {
-    for (let index = 0; index < params.length; index++) {
-      var element = params[index];
-      if (value > element) {
-        [value, element] = [element, value];
-      }
-    }
+// function SortArray(params) {
+//   for (let index = 0; index < params.length; index++) {
+//     for (let j = index + 1; j < params.length; j++) {
+//       if (params[index] > params[j]) {
+//         [params[index], params[j]] = [params[j], params[index]];
+//       }
+//     }
+//   }
+//   console.log(params, ":::s");
+
+// }
+
+// var newvalu = SortArray(sortarar);
+// check the anagram
+
+var anagram = "hithisisalirazazaidi";
+var hashmap = {};
+for (const value of anagram) {
+  //   hashmap[value] = (hashmap[value] ?? 0) + 1;
+  if (hashmap[value]) {
+    hashmap[value] = hashmap[value] + 1;
+  } else {
+    hashmap[value] = 1;
   }
-  console.log(params);
 }
-
-var newvalu = SortArray(sortarar);
-console.log(newvalu);
+for (const [val, key] in hashmap) {
+  console.log(val, "", (hashmap[key] ?? 0) + 1);
+}
