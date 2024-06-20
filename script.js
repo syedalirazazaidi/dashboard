@@ -120,6 +120,7 @@
 // check the anagram
 
 var anagram = "hithisisalirazazaidi";
+var newanagram = "asdsadeijijiajisds";
 var hashmap = {};
 for (const value of anagram) {
   //   hashmap[value] = (hashmap[value] ?? 0) + 1;
@@ -130,5 +131,13 @@ for (const value of anagram) {
   }
 }
 for (const [val, key] in hashmap) {
-  console.log(val, "", (hashmap[key] ?? 0) + 1);
+  //   console.log(val, "", (hashmap[key] ?? 0) + 1);
+}
+
+for (const iterator of newanagram) {
+  if (!hashmap[iterator]) {
+    console.log(false);
+  } 
+  
+  
 }
