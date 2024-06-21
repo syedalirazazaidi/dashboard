@@ -154,14 +154,13 @@
 
 // console.log(add);
 // count unique length
-var newsum = [1, 2, 2, 2, 3, 3, 10, 10, 11];
+var newsum = [1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8];
 var hashmap = {};
 for (const iterator of newsum) {
   hashmap[iterator] = (hashmap[iterator] ?? 0) + 1;
 }
 var newarra = [];
 for (const key in hashmap) {
-  console.log(hashmap[key]);
   newarra.push(hashmap[key]);
 }
-console.log(newarra.length,"length");
+console.log(newarra.length, "length");
