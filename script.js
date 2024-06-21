@@ -119,25 +119,49 @@
 // var newvalu = SortArray(sortarar);
 // check the anagram
 
-var anagram = "hithisisalirazazaidi";
-var newanagram = "asdsadeijijiajisds";
-var hashmap = {};
-for (const value of anagram) {
-  //   hashmap[value] = (hashmap[value] ?? 0) + 1;
-  if (hashmap[value]) {
-    hashmap[value] = hashmap[value] + 1;
-  } else {
-    hashmap[value] = 1;
-  }
-}
-for (const [val, key] in hashmap) {
-  //   console.log(val, "", (hashmap[key] ?? 0) + 1);
-}
+// var anagram = "hithisisalirazazaidi";
+// var newanagram = "asdsadeijijiajisds";
+// var hashmap = {};
+// for (const value of anagram) {
+//   //   hashmap[value] = (hashmap[value] ?? 0) + 1;
+//   if (hashmap[value]) {
+//     hashmap[value] = hashmap[value] + 1;
+//   } else {
+//     hashmap[value] = 1;
+//   }
+// }
+// for (const [val, key] in hashmap) {
+//   //   console.log(val, "", (hashmap[key] ?? 0) + 1);
+// }
 
-for (const iterator of newanagram) {
-  if (!hashmap[iterator]) {
-    console.log(false);
-  } 
-  
-  
+// for (const iterator of newanagram) {
+//   if (!hashmap[iterator]) {
+//     console.log(false);
+//   }
+
+// }
+
+// var newavalue = [1,2,3,4,5];
+// var memorize = null;
+// var add = 0;
+// for (const numb of newavalue) {
+//   if (memorize != numb) {
+//     memorize = numb;
+
+//     memorize += memorize;
+//   }
+// }
+
+// console.log(add);
+// count unique length
+var newsum = [1, 2, 2, 2, 3, 3, 10, 10, 11];
+var hashmap = {};
+for (const iterator of newsum) {
+  hashmap[iterator] = (hashmap[iterator] ?? 0) + 1;
 }
+var newarra = [];
+for (const key in hashmap) {
+  console.log(hashmap[key]);
+  newarra.push(hashmap[key]);
+}
+console.log(newarra.length,"length");
