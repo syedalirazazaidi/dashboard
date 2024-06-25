@@ -154,13 +154,62 @@
 
 // console.log(add);
 // count unique length
-var newsum = [1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8];
-var hashmap = {};
-for (const iterator of newsum) {
-  hashmap[iterator] = (hashmap[iterator] ?? 0) + 1;
+// var newsum = [1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8];
+// var hashmap = {};
+// for (const iterator of newsum) {
+//   hashmap[iterator] = (hashmap[iterator] ?? 0) + 1;
+// }
+// var newarra = [];
+// for (const key in hashmap) {
+//   newarra.push(hashmap[key]);
+// }
+// console.log(newarra.length, "length");
+
+// count max sum for first four consecutive number in the array
+// var sum = 0;
+// var consecutivenumber = [1, 2, 3, 4, 3, 5, 4, 6, 7, 8];
+// function sumNumber(params) {
+//   for (let index = 0; index < params.length; index++) {
+//     var temp = 0;
+//     for (let j = 0; j < 4; j++) {
+//       temp += params[j];
+//     }
+//     if (temp > sum) {
+//       sum = temp;
+//     }
+//   }
+//   return sum;
+// }
+
+// var newvalue = sumNumber(consecutivenumber);
+// console.log(newvalue);
+
+var array = [10, 29, 90, 12, 1, 2, 3, 9];
+for (let index = 0; index < array.length; index++) {
+  for (let j = index + 1; j < array.length; j++) {
+    if (array[index] > array[j]) {
+      var temp;
+      temp = array[index];
+      array[index] = array[j];
+      array[j] = temp;
+
+      //   return [array[index], array[j]] = [array[j], array[index]];
+    }
+  }
 }
-var newarra = [];
-for (const key in hashmap) {
-  newarra.push(hashmap[key]);
+console.log(array);
+// [1, 2, 3, 9, 10, 12, 29, 90];
+
+// now find index
+var min = 0;
+var max = array.length - 1;
+var minmax = (min + max) / 2;
+var medium = Math.floor(minmax);
+var index_find
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  if (90 === element) {
+    index_find = index;
+  }
 }
-console.log(newarra.length, "length");
+console.log(index_find);
