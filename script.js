@@ -197,19 +197,37 @@ for (let index = 0; index < array.length; index++) {
     }
   }
 }
-console.log(array);
+// console.log(array);
 // [1, 2, 3, 9, 10, 12, 29, 90];
 
 // now find index
-var min = 0;
-var max = array.length - 1;
-var minmax = (min + max) / 2;
-var medium = Math.floor(minmax);
-var index_find
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  if (90 === element) {
-    index_find = index;
+// var min = 0;
+// var max = array.length - 1;
+// var minmax = (min + max) / 2;
+// var medium = Math.floor(minmax);
+// var index_find
+// for (let index = 0; index < array.length; index++) {
+//   const element = array[index];
+//   if (90 === element) {
+//     index_find = index;
+//   }
+// }
+// console.log(index_find);
+
+// checking square in another array
+
+var array1 = [1, 2, 4, 4];
+var array2 = [1, 4, 16, 16];
+
+let answer = false;
+for (let index = 0; index < array1.length; index++) {
+  for (let j = 0; j < array1.length; j++) {
+    var square = array1[j] * array1[j];
+    if (square === array2[index]) {
+      answer = true;
+    } else {
+      answer = false;
+    }
   }
 }
-console.log(index_find);
+console.log(answer);
