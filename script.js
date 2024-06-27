@@ -184,19 +184,19 @@
 // var newvalue = sumNumber(consecutivenumber);
 // console.log(newvalue);
 
-var array = [10, 29, 90, 12, 1, 2, 3, 9];
-for (let index = 0; index < array.length; index++) {
-  for (let j = index + 1; j < array.length; j++) {
-    if (array[index] > array[j]) {
-      var temp;
-      temp = array[index];
-      array[index] = array[j];
-      array[j] = temp;
+// var array = [10, 29, 90, 12, 1, 2, 3, 9];
+// for (let index = 0; index < array.length; index++) {
+//   for (let j = index + 1; j < array.length; j++) {
+//     if (array[index] > array[j]) {
+//       var temp;
+//       temp = array[index];
+//       array[index] = array[j];
+//       array[j] = temp;
 
-      //   return [array[index], array[j]] = [array[j], array[index]];
-    }
-  }
-}
+//       //   return [array[index], array[j]] = [array[j], array[index]];
+//     }
+//   }
+// }
 // console.log(array);
 // [1, 2, 3, 9, 10, 12, 29, 90];
 
@@ -216,18 +216,59 @@ for (let index = 0; index < array.length; index++) {
 
 // checking square in another array
 
-var array1 = [1, 2, 4, 4];
-var array2 = [1, 4, 16, 16];
+// var hashmap = {};
+// for (const iterator of array1) {
+//   hashmap[iterator] = (hashmap[iterator] || 0) + 1;
+// }
 
-let answer = false;
-for (let index = 0; index < array1.length; index++) {
-  for (let j = 0; j < array1.length; j++) {
-    var square = array1[j] * array1[j];
-    if (square === array2[index]) {
-      answer = true;
-    } else {
-      answer = false;
-    }
-  }
-}
-console.log(answer);
+// for (const key in hashmap) {
+//   hashmap[key] = { "key:": key, "value:": hashmap[key] };
+// }
+// console.log("====================================",hashmap);
+
+// let answer = false;
+// for (let index = 0; index < array1.length; index++) {
+//   for (let j = 0; j < array1.length; j++) {
+//     var square = array1[j] * array1[j];
+//     if (square === array2[index]) {
+//       answer = true;
+//     } else {
+//       answer = false;
+//     }
+//   }
+// }
+// console.log(answer);
+
+// var array1 = [1, 2, 4, 4];
+// var array2 = [1, 4, 16, 16];
+
+// var maphash1 = {};
+// var maphash2 = {};
+// for (const value1 of array1) {
+//   maphash1[value1] = (maphash1[value1] ?? 0) + 1;
+// }
+// for (const value2 of array2) {
+//   maphash2[value2] = (maphash2[value2] ?? 0) + 1;
+// }
+// console.log(maphash1);
+// console.log(maphash2);
+// for (const key in object) {
+
+// }
+
+// var new_array = [3, 10, 1, 2, 11, 12, 14, 13, 1, 111, -11];
+// var swap;
+// for (let index = 0; index <= new_array.length - 1; index++) {
+//   for (let j = index + 1; j <= new_array.length - 1; j++) {
+//     if (new_array[j] < new_array[index]) {
+//       swap = new_array[j];
+//       new_array[j] = new_array[index];
+//       new_array[index] = swap;
+//     }
+//   }
+// }
+// console.log(new_array);
+
+// by using recursive function
+
+var array_ = [2, 3, 1, 4];
